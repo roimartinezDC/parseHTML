@@ -11,6 +11,7 @@ public class Main {
         Elements title = doc.select("title[data-react-helmet=\"true\"]");
         Elements location = doc.select("h1.CurrentConditions--location--kyTeL");
         Elements temperature = doc.select("span.CurrentConditions--tempValue--3a50n[data-testid=\"TemperatureValue\"]");
+        Elements sky = doc.select("div.CurrentConditions--phraseValue--2Z18W[data-testid=\"wxPhrase\"]");
 
         System.out.println();
         for (Element text : title) {
@@ -20,6 +21,9 @@ public class Main {
             System.out.println(text.html());
         }
         for (Element text : temperature) {
+            System.out.println(text.html());
+        }
+        for (Element text : sky) {
             System.out.println(text.html());
         }
     }
